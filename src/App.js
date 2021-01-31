@@ -95,7 +95,7 @@ function App() {
   const onSubmit = () => {
     setFaceDetect('')
     
-    fetch('https://hidden-lowlands-27942.herokuapp.com/imageurl', {
+    fetch('https://smartbrain-api.azurewebsites.net/imageurl', {
             method: 'post',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -105,7 +105,7 @@ function App() {
       .then(response => response.json())
       .then(response => {
         if(response){
-          fetch('https://hidden-lowlands-27942.herokuapp.com/image', {
+          fetch('https://smartbrain-api.azurewebsites.net/image', {
             method: 'put',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({

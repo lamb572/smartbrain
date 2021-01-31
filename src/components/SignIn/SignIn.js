@@ -16,7 +16,7 @@ const SignIn =({onRouteChange, loadUser}) => {
     };
 
     const onSubmitSignIn= () => {
-        fetch('https://hidden-lowlands-27942.herokuapp.com/signin', {
+        fetch('https://smartbrain-api.azurewebsites.net/signin', {
             method: 'post',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
